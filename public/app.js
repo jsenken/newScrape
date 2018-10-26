@@ -81,7 +81,7 @@ $(document).on("click", "#scrape", function() {
   })
     // With that done
     .then(function(){
-      console.log("this then function worked")
+      show();
     }
 
     );
@@ -89,4 +89,3 @@ $(document).on("click", "#scrape", function() {
 
 });
 
-      show();
