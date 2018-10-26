@@ -12,7 +12,10 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/newScrape", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/newScrape", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newScrape";
+
+mongoose.connect(MONGODB_URI);
 
 app.get("/scrape", function(req, res) {
     axios.get("http://www.espn.com/fantasy/football/").then(function(response) {
