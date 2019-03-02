@@ -3,45 +3,33 @@
   <head>
     <meta charset="UTF-8">
     <title>Fantasy Football Articles</title>
-    <style>
-      body { background-color: rgb(184, 243, 184) }
-      #wrapper {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 5%;
-      }
-      #articles {
-        display: inline-block;
-        overflow: auto;
-        width: 60%;
-        height: 700px;
-      }
-      #notes {
-        float: right;
-        width: 30%;
-      }
-      textarea, input {
-        display: block;
-        width: 100%;
-        background-color: green;
-      }
-      input {
-        height: 36px;
-        font-size: 24px;
-      }
-      textarea {
-        height: 200px;
-        font-size: 18px;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/journal/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css"  href="style.css"></link>
   </head>
   <body>
-    <div id="wrapper">
-      <h1>ESPN Fantasy Football Articles</h1>
-      <button id="scrape"> Scrape </button>
-      <div id="articles"></div>
-      <div id="notes"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1>ESPN Fantasy Football Articles</h1>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+              <button type="button" class="btn btn-success" id="scrape"> Scrape </button>
+          </div>
+          <div class="col-md-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div id="articles"></div>
+            <div id="notes"></div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
